@@ -1,0 +1,19 @@
+<div>Interpolation : {{VAR1}}  </div>
+<div>Propriety Binding:<img style="height: 100px;"   [src]="VAR2" alt="angularPic"></div>
+<div>Event Binding: <button (click)="Fun1()">Click me</button></div>
+<div> Twoway DataBinding: <input type="text" [(ngModel)]= "VAR3"> </div>
+<div>VAR3 : {{VAR3}}  </div>
+
+
+<div *ngIf="VAR1 else id ">
+<h6>bonjourrrr</h6>
+</div>
+<ng-template #id >  Bonsoirrrrr
+</ng-template>
+
+
+<ul *ngFor="let item of MyList , let i=index">
+  <li> {{i}} *{{item}}</li>
+
+</ul>
+
