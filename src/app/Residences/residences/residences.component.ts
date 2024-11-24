@@ -8,6 +8,9 @@ import { Residence } from 'src/app/core/models/residence';
 })
 export class ResidencesComponent {
 
+
+
+  searchItem="";
   listResidences:Residence[]=[
     {id:1,"name": "El fel","address":"Borj Cedria",
     "image":"../../assets/images/R1.jpg", status: "Disponible"},
@@ -21,4 +24,29 @@ export class ResidencesComponent {
     "image":"../../assets/images/R4.jpg", status: "En Construction"}
     ];
 
+
+    listFavoris: Residence[] = [];
+visiblity=false;
+vv! :string;
+    showLocation(r:Residence ){
+      if (r.address=== "inconnu"){
+        alert('adr inconnu')
+      }
+else{
+  this.visiblity=true;
+this.vv= r.name
+}
+    }
+
+
+addFavoris(r:Residence){
+  console.log(this.listFavoris);
+
+if (this.listFavoris.includes(r)){
+alert('already liked')
+}
+else{this.listFavoris.push(r);
+console.log('tab', this.listFavoris);
+}
+}
 }
