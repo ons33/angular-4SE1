@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Residence } from 'src/app/core/models/residence';
 
 @Component({
-  selector: 'app-residences',
-  templateUrl: './residences.component.html',
-  styleUrls: ['./residences.component.css']
+  selector: 'app-residence',
+  templateUrl: './residence.component.html',
+  styleUrls: ['./residence.component.css']
 })
-export class ResidencesComponent {
+export class ResidenceComponent {
 
 
 
@@ -28,7 +28,7 @@ export class ResidencesComponent {
     listFavoris: Residence[] = [];
 visiblity=false;
 vv! :string;
-    showLocation(r:Residence ){
+showLocation(r:Residence ){
       if (r.address=== "inconnu"){
         alert('adr inconnu')
       }

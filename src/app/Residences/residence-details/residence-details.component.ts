@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-residence-details',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./residence-details.component.css']
 })
 export class ResidenceDetailsComponent {
+  residenceId: any
+  constructor( private activatedroute : ActivatedRoute) { }
+  ngOnInit(): void {
+    this.residenceId = this.activatedroute.snapshot.paramMap.get('id');
+
+  }
+
 
 }

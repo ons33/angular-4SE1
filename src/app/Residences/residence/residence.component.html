@@ -1,0 +1,27 @@
+<h1 class="text-center my-4">List of Residences</h1>
+<!-- <input [(ngModel)]="searchItem"> -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let residence of listResidences">
+      <!-- <ng-container *ngIf="searchItem || searchItem === 'residence.adress'" class="card h-100"> -->
+      <img [src]="residence.image" class="card-img-top img-fluid" alt="{{residence.name}} image"
+        style="height: 200px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">{{ residence.name }}</h5>
+        <p class="card-text"><small class="text-muted">Status: {{ residence.status }}</small></p>
+        <!-- <div [ngSwitch]="residence.status"> -->
+        <!-- <li *ngSwitchCase="'Disponible'" style="color: green;">Disponible</li>
+            <li *ngSwitchCase="'Vendu'" style="color:red;">Vendu</li>
+            <li *ngSwitchCase="'En Construction'" style="color:yellow">En Construction</li>
+          </div> -->
+        <div> <button (click)="showLocation(residence)" class="btn btn-primary">Show Location</button>
+          <span *ngIf="visiblity && residence.name===vv "> {{residence.address}}</span>
+        </div>
+        <button class="btn btn-danger" (click)="addFavoris(residence)">Like</button>
+        <button class="btn btn-success"  [routerLink]="['/residence/details/',residence.id]">Show Details</button>
+      </div>
+      <!-- </ng-container> -->
+
+    </div>
+  </div>
+</div>

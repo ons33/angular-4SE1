@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ResidencesComponent } from './Residences/residences/residences.component';
 import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { AppComponent } from './app.component';
+import { ResidenceComponent } from './Residences/residence/residence.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ResidenceDetailsComponent } from './Residences/residence-details/residence-details.component';
+import { TestComponent } from './test/test.component';
+import { ApartmentsComponent } from './appartement/apartments/apartments.component';
+import { AddAppartmentComponent } from './appartement/add-appartment/add-appartment.component';
 
 const routes: Routes = [
+  { path: "home1", component: HomeComponent },
+  { path: "adduser", component: TestComponent },
 
-  // {path:'', redirectTo: '/home1', pathMatch: 'full'},
-  {path:'resi1', component:ResidencesComponent},
-  {path:'home1', component: HomeComponent},
-  // {path:'**', component: PageNotFoundComponent},
+  { path: "residence", component: ResidenceComponent },
+  { path: "residence/details/:id", component: ResidenceDetailsComponent},
+  {path:"appart", component:ApartmentsComponent},
+  {path:"addApp", component:AddAppartmentComponent},
+  { path: "**", component: NotFoundComponent },
 
 ];
 

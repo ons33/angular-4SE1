@@ -4,35 +4,35 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
-import { ResidencesComponent } from './Residences/residences/residences.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ResidenceDetailsComponent } from './residences/residence-details/residence-details.component';
-import { AddResidenceComponent } from './residences/add-residence/add-residence.component';
-import { ApartmentsComponent } from './appartements/apartments/apartments.component';
-import { ApartmentsByResidenceComponent } from './appartements/apartments-by-residence/apartments-by-residence.component';
-import { AddApartmentComponent } from './appartements/add-apartment/add-apartment.component';
+import { FooterComponent } from './footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ResidenceComponent } from './Residences/residence/residence.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ResidenceDetailsComponent } from './Residences/residence-details/residence-details.component';
+import { TestComponent } from './test/test.component';
+import { ApartmentsComponent } from './appartement/apartments/apartments.component';
+import { AddAppartmentComponent } from './appartement/add-appartment/add-appartment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
     HomeComponent,
-    ResidencesComponent,
-    PageNotFoundComponent,
+    FooterComponent,
+    ResidenceComponent,
+    NotFoundComponent,
     ResidenceDetailsComponent,
-    AddResidenceComponent,
+    TestComponent,
     ApartmentsComponent,
-    ApartmentsByResidenceComponent,
-    AddApartmentComponent
+    AddAppartmentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
