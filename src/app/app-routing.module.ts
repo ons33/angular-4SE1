@@ -7,10 +7,14 @@ import { ResidenceDetailsComponent } from './Residences/residence-details/reside
 import { TestComponent } from './test/test.component';
 import { ApartmentsComponent } from './appartement/apartments/apartments.component';
 import { AddAppartmentComponent } from './appartement/add-appartment/add-appartment.component';
+import { AddResidenceComponent } from './Residences/add-residence/add-residence.component';
 
 const routes: Routes = [
+  { path: "",redirectTo: "/residence", pathMatch: "full" },
+
   { path: "home1", component: HomeComponent },
   { path: "adduser", component: TestComponent },
+  { path: "addR", component: AddResidenceComponent },
 
   { path: "residence", component: ResidenceComponent },
   { path: "residence/details/:id", component: ResidenceDetailsComponent},

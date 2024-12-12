@@ -1,0 +1,57 @@
+{
+  "residences": [
+    {
+      "id": "1",
+      "name": "El fel",
+      "address": "Borj Cedria",
+      "status": "Disponible"
+    },
+    {
+      "id": "2",
+      "name": "El yassmin",
+      "address": "Borj Cedria",
+      "status": "Vendu"
+    },
+    {
+      "id": "3",
+      "name": "ahlem",
+      "address": "Borj Cedria",
+      "status": "Disponible"
+    },
+    {
+      "id": "4",
+      "name": "aaaaaaaaaaaaaa",
+      "address": "aaaaaaaaaaa",
+      "image": "aaaaaaaaaa",
+      "status": "Disponible"
+    },
+    {
+      "id": "5",
+      "name": "test",
+      "address": "aaaaaaaaaaa",
+      "image": "aaaaaaaaaa",
+      "status": "Disponible"
+    },
+    {
+      "id": 6,
+      "name": "4SE1",
+      "address": "rrrr",
+      "image": "r",
+      "status": "Disponible"
+    }
+  ],
+  "apartments": [
+    {
+      "id": "1",
+      "apartNum": 11,
+      "surface": 100,
+      "ResidenceId": 1
+    },
+    {
+      "id": "2",
+      "apartNum": 102,
+      "surface": 150,
+      "ResidenceId": 1
+    }
+  ]
+}
