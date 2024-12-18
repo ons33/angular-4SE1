@@ -30,7 +30,7 @@
     </div>
 
     <div class="row mb-3">
-      <label class="col-sm-3 col-form-label">Terrace:</label>
+      <label class="col-sm-3 col-form-label" >Terrace:</label>
       <div class="col-sm-9">
         <div class="form-check">
           <input type="radio" id="terraceYes" value="yes" formControlName="terrace" class="form-check-input" />
@@ -44,9 +44,9 @@
     </div>
 
     <div class="row mb-3">
-      <label for="surfaceTerrace" class="col-sm-3 col-form-label">Surface Terrace:</label>
+      <label for="surfaceTerrace" class="col-sm-3 col-form-label"  *ngIf="apartForm.get('terrace')?.value === 'yes'">Surface Terrace:</label>
       <div class="col-sm-9">
-        <input type="text" id="surfaceTerrace" class="form-control" formControlName="surfaceTerrace"
+        <input type="text" id="surfaceTerrace" class="form-control" formControlName="surfaceTerrace" *ngIf="apartForm.get('terrace')?.value === 'yes'"
         />
 
       </div>

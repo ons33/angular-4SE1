@@ -38,7 +38,7 @@ export class AddAppartmentComponent {
         floorNum: new FormControl('', [Validators.required, Validators.pattern('^[0-9]+$')]),
         surface: new FormControl('', Validators.required),
         terrace: new FormControl('yes', Validators.required),
-        surfaceTerrace: new FormControl({ value: '', disabled: true }, Validators.required),
+        surfaceTerrace: new FormControl('', Validators.required),
         category: new FormControl('S+1', Validators.required),
         residence: new FormControl('', Validators.required),
       });
@@ -51,7 +51,7 @@ export class AddAppartmentComponent {
     floorNum: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
     surface: ['', Validators.required],
     terrace: ['yes', Validators.required],
-    surfaceTerrace: [{ value: '', disabled: true }, Validators.required],
+    surfaceTerrace: ['', Validators.required],
     category: ['S+1', Validators.required],
     residence: ['', Validators.required]
   });

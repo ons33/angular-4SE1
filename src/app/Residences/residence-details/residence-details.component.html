@@ -1,1 +1,52 @@
-<p>Residence details for id: {{residenceId}}</p>
+<div class="card">
+  <div class="card-header">
+    <h3>Residence Details</h3>
+  </div>
+  <div class="card-body">
+    <div class="residence-details" *ngIf="residence">
+      <h2>{{ residence.name }}</h2>
+
+      <div class="details">
+        <p><strong>Address:</strong> {{ residence.address }}</p>
+        <p><strong>Status:</strong>
+          <span [ngClass]="{
+            'active': residence.status === 'Disponible',
+            'inactive': residence.status === 'En Construction',
+            'vendu': residence.status === 'Vendu'
+          }">
+            {{ residence.status }}
+          </span>
+        </p>
+
+        <div class="image-container">
+          <img style="width: 500px;" [src]="residence.image" alt="{{ residence.name }}" class="img-fluid" />
+        </div>
+      </div>
+
+      <div class="navigation-buttons mt-3">
+        <button
+          class="btn btn-outline-secondary"
+          (click)="previousResidence()"
+          [disabled]="currentResidenceIndex === 0">
+          ← Previous
+        </button>
+        <button
+          class="btn btn-outline-secondary"
+          (click)="nextResidence()"
+          [disabled]="currentResidenceIndex === listResidences.length - 1">
+          Next →
+        </button>
+      </div>
+
+      <!-- Button to update residence -->
+      <div class="mt-3">
+        <button
+          class="btn btn-warning"
+          routerLink="/updateResidence"
+          [queryParams]="{id: residence.id}">
+          Update Residence
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

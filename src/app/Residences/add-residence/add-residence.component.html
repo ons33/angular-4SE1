@@ -1,70 +1,46 @@
-<div class="container">
+<div class="container mt-4">
+  <h3>{{ isEditMode ? 'Update Residence' : 'Add Residence' }}</h3>
 
-  <form [formGroup]="addResidenceForm" (ngSubmit)="SaveResidence()">
-    <div class="row mb-3">
-      <label for="name" class="col-sm-2 col-form-label">Name: </label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" name="name" id="name" formControlName="name" />
-        <div *ngIf="name?.touched && name?.invalid" class=" alert text-danger">
-          <div *ngIf="name?.errors?.['required']">
-            Required field
-          </div>
-        </div>
+  <form [formGroup]="addResidenceForm" (ngSubmit)="saveResidence()">
+    <!-- Champ Name -->
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="name" class="form-control" />
+    </div>
+
+    <!-- Champ Address -->
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" id="address" formControlName="address" class="form-control" />
+    </div>
+
+    <!-- Champ Image -->
+    <div class="form-group">
+      <label for="image">Image URL</label>
+      <input type="text" id="image" formControlName="image" class="form-control" />
+    </div>
+
+    <!-- Champ Status -->
+    <div class="form-group">
+      <label>Status</label>
+      <div>
+        <input type="radio" id="disponible" formControlName="status" value="Disponible" />
+        <label for="disponible">Disponible</label>
+      </div>
+      <div>
+        <input type="radio" id="construction" formControlName="status" value="En Construction" />
+        <label for="construction">En Construction</label>
+      </div>
+      <div>
+        <input type="radio" id="vendu" formControlName="status" value="Vendu" />
+        <label for="vendu">Vendu</label>
       </div>
     </div>
 
-    <div class="row mb-3">
-      <label for="address" class="col-sm-2 col-form-label">Address: </label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" name="address" id="address" formControlName="address" />
-        <div *ngIf="address!.touched && address!.invalid" class="alert text-danger">
-          Required field
-        </div>
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label for="image" class="col-sm-2 col-form-label">Image: </label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" name="image" id="image" formControlName="image" />
-        <div *ngIf="image!.touched && image!.invalid" class="alert text-danger">
-          Required field
-        </div>
-      </div>
-    </div>
 
-    <div class="row mb-3">
-      <label for="status" class="col-sm-2 col-form-label"> Status: </label>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <input type="radio" class="form-check-input" name="status" formControlName="status" id="status"
-            value="Disponible" />
-          <label class="form-check-label" for="status">
-            Disponible
-          </label>
-        </div>
-        <div class="form-check">
-          <input type="radio" class="form-check-input" name="status" formControlName="status" id="status"
-            value="En Construction" />
-          <label class="form-check-label" for="status">
-            En Construction
-          </label>
-        </div>
-        <div class="form-check">
-          <input type="radio" class="form-check-input" name="status" formControlName="status" id="status"
-            value="Vendu" />
-          <label class="form-check-label" for="status">
-            Vendu
-          </label>
-        </div>
-        <div *ngIf="status!.touched && status!.invalid" class="alert text-danger">
-          Required field
-        </div>
-      </div>
-    </div>
-
-    <button type="submit" class="btn btn-outline-primary">Add</button>
-
+    <!-- Bouton Save -->
+    <button type="submit" class="btn btn-primary mt-3" [disabled]="addResidenceForm.invalid">
+      {{ isEditMode ? 'Update' : 'Add' }}
+    </button>
   </form>
-
-
 </div>

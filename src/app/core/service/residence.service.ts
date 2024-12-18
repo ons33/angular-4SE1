@@ -23,7 +23,9 @@ export class ResidenceService {
   getResidenceById(id: number){
     return this.http.get<Residence>(`${this.residenceUrl}/${id}`);
   }
-  updateResidence(residence: Residence){
-    return this.http.put(`${this.residenceUrl}/${residence.id}`, residence);
+  updateResidence(residence: Residence) {
+
+    return this.http.put(`http://localhost:3000/residences/${residence.id}`, residence);
+
   }
 }

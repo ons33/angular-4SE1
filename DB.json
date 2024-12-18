@@ -2,41 +2,23 @@
   "residences": [
     {
       "id": "1",
-      "name": "El fel",
+      "name": "El felllll",
       "address": "Borj Cedria",
+      "image": "../../assets/images/R1.jpg",
       "status": "Disponible"
     },
     {
       "id": "2",
       "name": "El yassmin",
       "address": "Borj Cedria",
+      "image": "../../assets/images/R1.jpg",
       "status": "Vendu"
     },
     {
       "id": "3",
       "name": "ahlem",
       "address": "Borj Cedria",
-      "status": "Disponible"
-    },
-    {
-      "id": "4",
-      "name": "aaaaaaaaaaaaaa",
-      "address": "aaaaaaaaaaa",
-      "image": "aaaaaaaaaa",
-      "status": "Disponible"
-    },
-    {
-      "id": "5",
-      "name": "test",
-      "address": "aaaaaaaaaaa",
-      "image": "aaaaaaaaaa",
-      "status": "Disponible"
-    },
-    {
-      "id": 6,
-      "name": "4SE1",
-      "address": "rrrr",
-      "image": "r",
+      "image": "../../assets/images/R1.jpg",
       "status": "Disponible"
     }
   ],

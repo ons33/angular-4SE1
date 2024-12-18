@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: "adduser", component: TestComponent },
   { path: "addR", component: AddResidenceComponent },
 
+    { path: 'updateResidence', component: AddResidenceComponent }, 
   { path: "residence", component: ResidenceComponent },
   { path: "residence/details/:id", component: ResidenceDetailsComponent},
   {path:"appart", component:ApartmentsComponent},
